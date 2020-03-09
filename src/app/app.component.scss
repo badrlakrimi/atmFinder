@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css?family=Lato|Pacifico|Open+Sans&display=swap");
+
+* {
+  font-family: "Lato", sans-serif;
+}
+.navbar-brand{
+  font-family: "Open Sans", sans-serif;
+}
+.nav-link {
+  font-weight: bold;
+}
+.btn-warning:focus,
+.btn-warning.focus {
+  color: #ffffff;
+  background-color: #ef4827;
+  border-color: #ef4827;
+}

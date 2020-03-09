@@ -1,0 +1,14 @@
+
+.masthead {
+  height: 88.2vh;
+  min-height: 500px;
+  background: linear-gradient(
+      0deg,
+      rgba(33, 33, 33, 0.5),
+      rgba(33, 33, 33, 0.3)
+    ),
+    url("https://source.unsplash.com/pElSkGRA2NU/1920x1080");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}

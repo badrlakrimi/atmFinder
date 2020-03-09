@@ -1,0 +1,96 @@
+<section class="login mt-4">
+  <div class="container">
+    <div class="card shadow p-5">
+      <div class="row">
+
+        <div class="col-md-6 img-flex">
+          <img src="../../assets/img/addUser.svg" class="img" alt="" />
+        </div>
+
+        <div class="col-md-6">
+          <h2 class="mb-2">Welcome To your Atm Finder</h2>
+          <p class="mt-2">
+           Stay always close to your Atm and locate your nearby Atms<br />
+            Please fill your personal information
+          </p>
+          <form action="">
+            <div class="form-group">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"
+                    ><i class="fas fa-user"></i
+                  ></span>
+                </div>
+                <input
+                  class="form-control"
+                  placeholder="Full Name"
+                  type="text"
+                />
+              </div>
+            </div>
+
+              <div class="form-group">
+                <div class="input-group mb-3">
+                  <select class="custom-select" id="inlineFormCustomSelect">
+                    <option selected>Choose your Bank</option>
+                    <option value="1">Attijariwafa Bank</option>
+                    <option value="2">Banque populaire</option>
+                    <option value="3">BMCE Bank</option>
+                    <option value="3">BMCI Bank</option>
+                    <option value="3">CIH Bank</option>
+                    <option value="3">Crédit du Maroc</option>
+                  </select>
+                </div>
+              </div>
+
+            <div class="form-group">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"
+                    ><i class="fas fa-envelope"></i
+                  ></span>
+                </div>
+                <input
+                  class="form-control"
+                  placeholder="Email address"
+                  type="email"
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"
+                    ><i class="fas fa-lock"></i
+                  ></span>
+                </div>
+                <input
+                  class="form-control"
+                  placeholder="Password"
+                  type="password"
+                />
+              </div>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"
+                    ><i class="fas fa-lock"></i
+                  ></span>
+                </div>
+                <input
+                  class="form-control"
+                  placeholder="Password"
+                  type="password"
+                />
+              </div>
+            </div>
+            <button (click)="login()" class="btn btn-warning">
+              <i class="fas fa-user-lock mr-2"></i> Register
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,25 @@
+<section class="p-3">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card shadow">
+          <mgl-map
+          style="height: 100vh;"
+    [style]="'mapbox://styles/mapbox/streets-v9'"
+  >
+    <mgl-control
+      mglGeolocate
+      [positionOptions]="{
+        enableHighAccuracy: true
+      }"
+      [trackUserLocation]="true"
+    ></mgl-control>
+  </mgl-map>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</section>
