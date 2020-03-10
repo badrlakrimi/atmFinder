@@ -1,25 +1,53 @@
-<section class="p-3">
+<section class="p-3 mt-5">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-12">
-        <div class="card shadow">
-          <mgl-map
-          style="height: 100vh;"
-    [style]="'mapbox://styles/mapbox/streets-v9'"
-  >
-    <mgl-control
-      mglGeolocate
-      [positionOptions]="{
-        enableHighAccuracy: true
-      }"
-      [trackUserLocation]="true"
-    ></mgl-control>
-  </mgl-map>
-        </div>
-
+      <div class="col-md-3">
+        <ul class="list-group">
+          <li
+            class="list-group-item bank"
+            *ngFor="let b of bank"
+            (click)="onAtmClick(b)"
+          >
+            {{ b["bankName"] }}
+            <br />
+            <span class="text-muted">{{ b["address"] }}</span>
+          </li>
+        </ul>
       </div>
+      <div class="col-md-9">
+        <mgl-map
+          class="match-parent"
+          [style]="'mapbox://styles/mapbox/streets-v9'"
+          [zoom]="[80]"
+          [center]="center"
+        >
+          <mgl-control
+            mglGeolocate
+            [positionOptions]="{
+              enableHighAccuracy: true
+            }"
+            [trackUserLocation]="true"
+          ></mgl-control>
 
+          <ng-container *ngFor="let feature of bank">
+            <mgl-marker
+              #myMarker
+              [lngLat]="[feature['latitude'], feature['longitude']]"
+            >
+              <div
+                class="marker"
+                (click)="alert(feature)"
+                [ngStyle]="{
+                  'background-image': 'url(https://www.apyart.com/1904-thickbox_default/rouge-pop-500ml.jpg)',
+                  width: '10px',
+                  height: '10px'
+                }"
+              ></div>
+            </mgl-marker>
+            <mgl-popup [marker]="myMarker">{{ feature["bankName"] }}</mgl-popup>
+          </ng-container>
+        </mgl-map>
+      </div>
     </div>
   </div>
-
 </section>

@@ -1,3 +1,4 @@
+import { AtmSearchComponent } from './atm-search/atm-search.component';
 import { AtmfinderComponent } from './atmfinder/atmfinder.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { RegisterComponent } from './register/register.component';
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: "atmfinder", component: AtmfinderComponent },
   { path: "", redirectTo: "home", pathMatch: "full" },
   { path: "register", component: RegisterComponent },
+  { path: "atmsearch", component: AtmSearchComponent },
   { path: "**", component: PageNotFoundComponent }
 ];
 

@@ -9,6 +9,8 @@ import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AtmfinderComponent } from './atmfinder/atmfinder.component';
 import { NgxMapboxGLModule } from 'ngx-mapbox-gl';
+import { AtmSearchComponent } from './atm-search/atm-search.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -17,10 +19,12 @@ import { NgxMapboxGLModule } from 'ngx-mapbox-gl';
     RegisterComponent,
     HomeComponent,
     PageNotFoundComponent,
-    AtmfinderComponent
+    AtmfinderComponent,
+    AtmSearchComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     NgxMapboxGLModule.withConfig({
       // tslint:disable-next-line: max-line-length
